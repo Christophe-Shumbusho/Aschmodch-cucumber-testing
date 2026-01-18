@@ -1,5 +1,6 @@
 package Factory;
 
+import Utils.ConfigLoader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -22,6 +23,7 @@ public class DriverFactory {
 
         }
         driver.manage().window().maximize();
+        driver.get(ConfigLoader.getInstance().getBaseUrl());
         return driver;
     }
 
