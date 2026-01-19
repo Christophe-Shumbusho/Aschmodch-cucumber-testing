@@ -14,8 +14,3 @@ Feature: Login functionality
     Then I should be redirected to my account dashboard
     And I see a welcome message contains my username
 
-#  Scenario: Customer Login with invalid password
-#    When I enter invalid password credential
-#      | username            | password   |
-#      | christophe@test.com | WrongPass  |
-##    Then an error message should be displayed on the login page

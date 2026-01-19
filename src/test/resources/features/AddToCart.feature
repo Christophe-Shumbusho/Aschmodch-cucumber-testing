@@ -11,9 +11,9 @@ Feature: Add product to cart functionality
     Then I should see 1 "Boho Bangle Bracelet" in the cart
 
 
-  Scenario Outline: Add more product to cart
+  Scenario Outline: Add products to cart
     When I add a "<product_name>" to the cart
-    Then I should see "<product_name>" in the cart
+    Then I should see 1 "<product_name>" in the cart
 
     Examples:
     |product_name|

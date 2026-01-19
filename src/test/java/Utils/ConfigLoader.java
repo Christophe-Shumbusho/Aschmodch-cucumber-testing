@@ -3,8 +3,6 @@ package Utils;
 import Constants.EnvType;
 
 import java.util.Properties;
-
-import static Constants.EnvType.PROD;
 import static Constants.EnvType.STAGE;
 
 public class ConfigLoader {
@@ -14,10 +12,10 @@ public class ConfigLoader {
 
     private ConfigLoader(){
         String env =  System.getProperty("env",String.valueOf(EnvType.STAGE));
-        switch (EnvType.valueOf(env)){
-            case PROD -> properties = PropertyUtils.propertyLoader("src/test/resources/prod_config.properties");
-            case STAGE -> properties = PropertyUtils.propertyLoader("src/test/resources/stage_config.properties");
-            default -> throw new IllegalStateException("INVALID ENV" + env);
+        if (EnvType.valueOf(env) == STAGE) {
+            properties = PropertyUtils.propertyLoader("src/test/resources/stage_config.properties");
+        } else {
+            throw new IllegalStateException("INVALID ENV" + env);
         }
 
 

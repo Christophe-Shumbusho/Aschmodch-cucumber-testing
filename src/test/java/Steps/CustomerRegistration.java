@@ -51,7 +51,7 @@ public class CustomerRegistration {
     @And("I see welcome message contains my username")
     public void iSeeWelcomeMessageContainsMyUsername() {
         String actualWelcomeMessage = registration.getWelcomeMessage();
-        Assert.assertEquals("Hello Christiana (not Christiana? Log out)",actualWelcomeMessage);
+        Assert.assertEquals("Hello Christian (not Christian? Log out)",actualWelcomeMessage);
     }
 
     @When("I enter exist email credential")

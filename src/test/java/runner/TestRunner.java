@@ -9,10 +9,14 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/CustomerLogin.feature",
-        glue = {"Steps","Pages","Factory", "DomainObject","Constants"},
+        features = "src/test/resources/features",
+        glue = {"Steps","Pages","Factory", "DomainObject","Constants","CustomType","Hooks"},
         snippets = CAMELCASE,
-        plugin = "pretty",
+        plugin = {
+        "pretty",
+        "html:target/cucumber-report.html",
+        "json:target/cucumber.json"
+        },
         monochrome = true
 
 )
