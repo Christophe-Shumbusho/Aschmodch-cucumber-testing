@@ -20,7 +20,7 @@ public class CustomerRegistration {
 
     @Given("I am on the registration page")
     public void iAmOnTheRegistrationPage() {
-        driver = DriverFactory.initializeDriver(System.getProperty("browser","chrome"));
+        driver = DriverFactory.getDriver();
         registration = new RegistrationPage(driver);
         registration.load(EndPoints.ACCOUNT.url);
 
