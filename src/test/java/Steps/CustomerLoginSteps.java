@@ -19,7 +19,7 @@ public class CustomerLoginSteps {
     protected LoginPage login;
     @Given("I am on the login page")
     public void iAmOnTheLoginPage() {
-        driver = DriverFactory.initializeDriver(System.getProperty("browser","chrome"));
+        driver = DriverFactory.getDriver();
         login = new LoginPage(driver);
         login.load(EndPoints.ACCOUNT.url);
 

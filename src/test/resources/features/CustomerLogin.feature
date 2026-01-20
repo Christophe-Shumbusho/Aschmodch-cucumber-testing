@@ -2,7 +2,7 @@ Feature: Login functionality
   As a registered customer
   I want to log into my account
   So that I can view my orders and checkout faster
-
+  @login
   Background:
     Given I am on the login page
 
