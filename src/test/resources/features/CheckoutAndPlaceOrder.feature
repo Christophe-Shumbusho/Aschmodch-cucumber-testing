@@ -3,7 +3,7 @@ Feature: Checkout and Place order
   As a guest customer
   I want to checkout my cart
   So that I can place an order successfully
-
+  @Checkout @placeOrder
   Scenario: Guest customer place order using default payment option
     Given I am a guest customer
     And my billing details are

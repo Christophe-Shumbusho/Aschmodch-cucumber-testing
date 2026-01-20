@@ -2,7 +2,7 @@ Feature: Customer registration
   As a new customer,
   I want to create an account by registering with my personal details,
   So that I can login in the website.
-
+  @registration
   Background:
     Given I am on the registration page
 

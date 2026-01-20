@@ -2,7 +2,7 @@ Feature: Add product to cart functionality
   As a customer
   I want to add products to my cart
   So that I can purchase them later
-
+  @addToCart
   Background:
   Given I am on the store page
 
